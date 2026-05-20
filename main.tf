@@ -76,21 +76,21 @@ resource "azurerm_linux_virtual_machine" "azure_vm" {
     version   = "latest"
   }
 }
-#resource "google_compute_instance" "gcp_vm" {
-#  name         = "terraform-gcp-vm"
-#  machine_type = "e2-medium"
-#  zone         = "asia-south1-a"
+ resource "google_compute_instance" "gcp_vm" {
+   name         = "terraform-gcp-vm"
+   machine_type = "e2-medium"
+   zone         = "asia-south1-a"
 
-#  boot_disk {
-#    initialize_params {
-#      image = "debian-cloud/debian-11"
-#    }
-#  }
+   boot_disk {
+     initialize_params {
+       image = "debian-cloud/debian-11"
+     }
+   }
 
-#  network_interface {
-#    network = "default"
-#
-#    access_config {
-#   }
-#  }
-#}
+   network_interface {
+     network = "default"
+ 
+     access_config {
+    }
+   }
+ }
